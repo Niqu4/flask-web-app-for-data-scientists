@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <meta name='description' content='Flask App'>
+    <meta name='author' content='Nuraly Uzakaliyev'>
+    <link rel='shortcut icon' href='{{ url_for("static", filename="favicon.ico") }}'>
+
+    <title>Детализация P2P</title>
+    <link href='{{ url_for("static", filename="bootstrap.min.css")}}' rel='stylesheet'>
+    <link href='{{ url_for("static", filename="sticky-footer-navbar.css")}}' rel='stylesheet'>
+    <link type='text/css' rel='stylesheet' href='{{ url_for("static", filename="style.css") }}'>
+  </head>
+
+  <body>
+   
+    <header>
+      <!-- Fixed navbar -->
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+      <nav class='navbar navbar-expand-md navbar-dark fixed-top bg-dark'>
+        <a class='navbar-brand' style = 'color : white'>Details</a>
+      </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main role='main' class='container'>
+      <br>  
+      <h1> Select your filters </h1>
+      <br>
+        <form class = 'form' method = post action='{{ url_for('upload_page') }}'> 
+            <div class = 'form_field'>    
+          <label for='date'>From date:</label>
+          <input type='date' id='e' name='date' value = {{ request.form['date'] }}>
+        </div>
+        
+        <div class = 'form_field'>  
+          <label>Тип карты:</label>
+              
+            <input type = 'checkbox' value = 'Visa'       name = 'type_1' checked> 
+            <label for = 'card_type'> Visa       </label> <br>
+            
+            <input type = 'checkbox' value = 'MC' name = 'type_2' checked> 
+            <label for = 'card_type'> Mastercard </label> <br>
+        </div>
+
+        <div class = 'form_field'>  
+          <label for = 'mcc'> MCC: </label>
+          <input type='text' name='mcc' id = 'mcc' required value = {{ request.form['mcc'] }} > 
+        </div>
+
+        <div class = 'form_field'>
+          <label for = 'bank'> Bank: </label> 
+          <input type='text' name='bank' id = 'bank' value = {{ request.form['bank'] }}> 
+          </div>
+
+          <div class = 'form_field'>
+          <label for = 'merchant'> Merchant: </label> 
+          <input type='text' name='merchant' id = 'merchant' value = {{ request.form['merchant'] }}> 
+        </div>
+              <input type='submit' onclick="$('#loading').show();">
+       </form>
+        
+        
+        
+        <br><br> 
+        <div id="loading">
+            <h6> Loading... </h6>
+            <br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        {% if request.method == 'POST' %}
+
+        <h3> File details: </h3> 
+        <ul>Date from: {{ date }}</ul>
+        <ul>Card type: {{ card_1, card_2 }}</ul>
+        <ul>МСС: {{ mcc }}</ul>
+        <ul>Bank: {{ bank }}</ul>
+        <ul>Merchant: {{ merchant }}</ul>
+        <ul><a href={{ url_for("static", filename="Detalization.xlsx") }} download> Download </a></ul>
+        
+        {% endif %}
+        
+    </main>
+
+    <footer class='footer'>
+      <div class='container'>
+        <span class='text-muted'>by Niqua @ https://github.com/Niqu4 </span>
+      </div>
+    </footer>
+
+  </body>
+</html>
