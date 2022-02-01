@@ -8,5 +8,8 @@ The repository contains:
 
 
 
-All rights belong to their respective owners. Any image used is copyright-free.
+All rights belong to their respective owners. 
+
+Any image used is copyright-free.
+
 Contact me @ linkedin.com/in/nurali-u
