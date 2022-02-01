@@ -14,4 +14,5 @@ All rights belong to their respective owners.
 
 Any image used is copyright-free.
 
-Contact me @ linkedin.com/in/nurali-u
+Contact me @ [LinkedIn](https://linkedin.com/in/nurali-u/)
+
