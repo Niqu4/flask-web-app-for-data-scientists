@@ -7,6 +7,8 @@ The repository contains:
 - Sample SQL-script, containing example of OracleDB connection
 
 
+##### if anything here helped you, please do star this repository
+
 
 All rights belong to their respective owners. 
 
