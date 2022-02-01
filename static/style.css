@@ -1,0 +1,22 @@
+.form_field {
+	display: flex;
+	justify-content: space-between;
+    margin: 2% 0 2% 0;
+}
+
+
+form{
+    width : 30%;
+    display : flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+div#loading {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: url(/static/loadingimage.gif) no-repeat;
+    cursor: wait;
+    }
