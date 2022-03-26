@@ -1,5 +1,5 @@
 # flask-web-app-for-data-scientists
-This repository is an annex to my Towards Data Science article
+This repository is an annex to my Towards Data Science [article](https://medium.com/@everybodyhatesnurali/automate-your-data-scientist-routine-with-flask-web-services-69eaf08799a1)
 
 The repository contains:
 - index.html file, formatted by Bootstrap4 css
